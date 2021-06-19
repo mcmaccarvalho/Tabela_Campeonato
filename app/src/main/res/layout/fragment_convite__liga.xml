@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.home.Convidar_para_Liga">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clconvite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardlig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/branco"
+            android:backgroundTint="@color/branco"
+            android:padding="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView47"
+            app:layout_constraintStart_toStartOf="@+id/textView47"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/fundo_verde_escuro"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llliga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/txtnomeliga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/liga"
+                    android:text="@string/liga"
+                    android:textColor="@color/fundo_verde_escuro"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgliga"
+                    app:layout_constraintStart_toEndOf="@+id/imgliga"
+                    app:layout_constraintTop_toTopOf="@+id/imgliga" />
+
+                <ImageView
+                    android:id="@+id/imgliga"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:contentDescription="@string/escudoliga"
+                    android:src="@drawable/escudo_preto_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgshare"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/escudoliga"
+                    app:layout_constraintStart_toStartOf="@+id/imgliga"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/liga_share" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/emailjog"
+            android:textColor="@color/fundo_verde_escuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardlig" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/branco"
+            android:backgroundTint="@color/branco"
+            android:padding="4dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="6dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView47"
+            app:layout_constraintStart_toStartOf="@+id/textView47"
+            app:layout_constraintTop_toBottomOf="@+id/textView47"
+            app:strokeColor="@color/fundo_verde_escuro"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/etapelido"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:autofillHints="@string/nick"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/e_mail"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="15"
+                    android:textColor="@color/fundo_verde_escuro"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+
+            android:id="@+id/btbuscar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Buscar"
+            android:textColor="@color/fundo_verde_escuro"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1"
+            app:rippleColor="@color/fundo_verde_escuro"
+            app:strokeColor="@color/fundo_verde_escuro" />
+
+
+        <TextView
+            android:id="@+id/txtjogador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/jogador"
+            android:textColor="@color/fundo_verde_escuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+
+            android:id="@+id/btenviar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/EnviarConvite"
+            android:textColor="#C6CCC6"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtjogador"
+            app:layout_constraintStart_toStartOf="@+id/txtjogador"
+            app:layout_constraintTop_toBottomOf="@+id/txtjogador"
+            app:rippleColor="@color/fundo_verde_escuro"
+            app:strokeColor="@color/fundo_verde_escuro" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/selecionar_permissoes"
+            android:textColor="@color/fundo_verde_escuro"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/btbuscar" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <CheckBox
+                android:id="@+id/rbassistir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/acompanhar_campeonatos"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/rbalterar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/inserir_alterar_resultados"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/rbiniciar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:text="@string/iniciar_encerrar_campeonatos"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

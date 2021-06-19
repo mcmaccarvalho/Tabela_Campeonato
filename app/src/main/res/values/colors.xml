@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#396B33</color>
+    <color name="colorPrimaryDark">#396B33</color>
+    <color name="colorAccent">#FF0000</color>
+    <color name="teste">#FF8F00</color>
+    <color name="fundoadapter">#C5E1A5</color>
+    <color name="fundoinsere">#CBFFFFFF</color>
+    <color name="fundo_jog">#00000000</color>
+
+    <color name="fundo_verde_escuro">#1F6612</color>
+    <color name="fundo_layout">#F7E7CF</color>
+    <color name="riplle_bt_amarelo">#FFEB3B</color>
+    <color name="tabsel">#B4D6B4</color>
+    <!--    #1A237E-->
+
+
+    <color name="branco">#FFFFFF</color>
+    <color name="transparente">#00FFFFFF</color>
+    <color name="vermelho">#FD0303</color>
+    <color name="azul">#3F51B5</color>
+    <color name="preto">#000000</color>
+    <color name="gelo">#C6E6E6EC</color>
+    <color name="snackcampo">#86C964</color>
+
+    <color name="colorPrimarytrans">#87C9EC</color>
+    <color name="fundo_aviso">#FFFB22</color>
+
+
+</resources>

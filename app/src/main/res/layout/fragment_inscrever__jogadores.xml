@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clinscricao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Campeonatos.Inscrever_Jogadores">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvjogadores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btavancar"
+        app:layout_constraintEnd_toStartOf="@+id/cvins"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/txtselecione" />
+
+
+
+    <TextView
+        android:id="@+id/txtselecione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/selecione_jogadores"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <Button
+        android:id="@+id/btavancar"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/avan_ar"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/fundo_verde_escuro"
+        app:strokeColor="@color/fundo_verde_escuro" />
+
+    <Button
+        android:id="@+id/btvoltar"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/voltar"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/fundo_verde_escuro"
+        app:strokeColor="@color/fundo_verde_escuro" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/fundo_verde_escuro"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rvjogadores">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@color/branco">
+
+            <TextView
+                android:id="@+id/txttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/jogadores_inscritos"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txtnumins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttitle"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <TextView
+                android:id="@+id/txtnomejog1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtnumins" />
+
+            <TextView
+                android:id="@+id/txtnomejog2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtnomejog1"
+                app:layout_constraintStart_toStartOf="@+id/txtnomejog1"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomejog1" />
+
+            <TextView
+                android:id="@+id/txtnomejog3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtnomejog2"
+                app:layout_constraintStart_toStartOf="@+id/txtnomejog2"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomejog2" />
+
+            <TextView
+                android:id="@+id/txtnomejog4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtnomejog3"
+                app:layout_constraintStart_toStartOf="@+id/txtnomejog3"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomejog3" />
+
+            <TextView
+                android:id="@+id/txtnomejog5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtnomejog4"
+                app:layout_constraintStart_toStartOf="@+id/txtnomejog4"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomejog4" />
+
+            <TextView
+                android:id="@+id/txtnomejog6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:ems="6"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtnomejog5"
+                app:layout_constraintStart_toStartOf="@+id/txtnomejog5"
+                app:layout_constraintTop_toBottomOf="@+id/txtnomejog5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nºparticipantes"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtnumpart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tipo"
+        android:textSize="18sp"
+        android:textColor="@color/fundo_verde_escuro"
+        app:layout_constraintStart_toStartOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/txttipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/fundo_verde_escuro"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/browser_actions_title_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

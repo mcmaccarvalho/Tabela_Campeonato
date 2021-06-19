@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/svnovocamp"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/campo4"
+android:focusable="true"
+android:focusableInTouchMode="true"
+android:padding="4dp"
+tools:context=".ui.Campeonatos.Novo_Campeonato">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clnovocamp"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+
+    <TextView
+        android:id="@+id/txtnumpart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/selecione_n_mero_de_participantes"
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:background="@color/branco"
+        android:backgroundTint="@color/branco"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        app:strokeColor="@color/fundo_verde_escuro"
+        app:strokeWidth="1dp"
+        android:id="@+id/cvnumpart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtnumpart">
+
+
+        <RadioGroup
+            android:id="@+id/rgnumpart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="@string/_3"
+                android:textColor="@color/preto"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="@string/_4"
+                android:textColor="@color/preto"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:text="@string/_5"
+                android:textColor="@color/preto"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_6" />
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txtnumturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/selecione_tipo_de_campeonato"
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvnumpart" />
+
+    <com.google.android.material.card.MaterialCardView
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        app:strokeColor="@color/fundo_verde_escuro"
+        app:strokeWidth="1dp"
+        android:id="@+id/cvturno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/branco"
+        android:backgroundTint="@color/branco"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtnumturn">
+
+        <RadioGroup
+            android:id="@+id/rgnumturno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Pontos Corridos 1 turno (só ida)"
+                android:textColor="@color/preto"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:text="Pontos Corridos 2 turnos (ida e volta)"
+                android:textColor="@color/preto"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:text="1 turno + final (só ida) "
+                android:textColor="@color/preto"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
+                android:text="2 turnos + final (ida e volta)"
+                android:textColor="@color/preto"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/txtjogos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="Jogos Previstos: "
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cvturno"
+        app:layout_constraintTop_toBottomOf="@+id/cvturno"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtnumjogos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtjogos"
+        app:layout_constraintStart_toEndOf="@+id/txtjogos"
+        app:layout_constraintTop_toTopOf="@+id/txtjogos" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="partidas"
+        android:textColor="@color/preto"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtjogos"
+        app:layout_constraintStart_toEndOf="@+id/txtnumjogos"
+        app:layout_constraintTop_toTopOf="@+id/txtjogos" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:textSize="14sp"
+        app:rippleColor="@color/fundo_verde_escuro"
+        app:strokeColor="@color/fundo_verde_escuro"
+        android:textColor="@color/preto"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:id="@+id/btavancar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="AVANÇAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtjogos"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

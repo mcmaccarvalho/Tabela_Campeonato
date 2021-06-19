@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Campeonatos.Segundo_Turno">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvjogos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textred"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llblue"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="32dp"
+        android:background="#3F51B5"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/textb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textb"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/pr_ximo_jogo"
+        android:textColor="@color/fundo_verde_escuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/llblue" />
+
+    <LinearLayout
+        android:id="@+id/llred"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:background="#FF0000"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/textred"
+        app:layout_constraintStart_toEndOf="@id/textb"
+        app:layout_constraintTop_toTopOf="@+id/textred"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/realizado"
+        android:textColor="@color/fundo_verde_escuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/llred" />
+
+    <LinearLayout
+        android:id="@+id/llgren"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/grama"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/textg"
+        app:layout_constraintStart_toEndOf="@id/textred"
+        app:layout_constraintTop_toTopOf="@+id/textg"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/em_aberto"
+        android:textColor="@color/fundo_verde_escuro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/llgren" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

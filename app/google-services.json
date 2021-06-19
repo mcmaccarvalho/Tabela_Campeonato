@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "764096442630",
+    "firebase_url": "https://tabelafootballgamer.firebaseio.com",
+    "project_id": "tabelafootballgamer",
+    "storage_bucket": "tabelafootballgamer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764096442630:android:b96a036a1a2fc2aed82e87",
+        "android_client_info": {
+          "package_name": "com.ponto.ideal.solucoes.tabelacampeonato"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764096442630-cnga6fpcrtrt48ihjerqpu6fgqtje50e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ponto.ideal.solucoes.tabelacampeonato",
+            "certificate_hash": "f5f4ce589e281aa99c79b5196ce401ea60bd9dfb"
+          }
+        },
+        {
+          "client_id": "764096442630-v5l8thksemdlvg8rved79r4vmhv247t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS1n2AEKhjmR045rW1q-UesjU6ODw0aGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764096442630-ck712gjp92oh5eanje27cjiuhc1v0t34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

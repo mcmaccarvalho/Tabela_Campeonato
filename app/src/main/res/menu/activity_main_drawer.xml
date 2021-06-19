@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/estatisticas"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="Estatísticas" />
+
+        <item
+            android:id="@+id/nav_criar_liga"
+            android:icon="@drawable/escudo_preto_icon"
+            android:title="Criar Liga Compartilhada" />
+
+        <item
+            android:id="@+id/nav_convite_liga"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Convidar para Liga" />
+
+        <item
+            android:id="@+id/nav_ver_convites"
+            android:icon="@drawable/email_bco"
+            android:title="Convites" />
+
+    </group>
+
+    <item android:title="Tabela Campeonato">
+        <menu>
+            <item
+                android:id="@+id/sincronizar"
+                android:title="Sincronizar"
+                android:icon="@drawable/ic_sync_black_24dp"/>
+
+            <item
+                android:id="@+id/nav_deslogar"
+                android:icon="@drawable/ic_seta_black_24dp"
+                android:title="@string/deslogar" />
+            <item
+                android:id="@+id/nav_sair"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/sair" />
+        </menu>
+    </item>
+
+</menu>

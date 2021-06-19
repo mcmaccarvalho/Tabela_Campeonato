@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_criar_Liga"
+            app:destination="@id/criar_Liga"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+
+
+        <action
+            android:id="@+id/action_nav_home_to_lista_Convites"
+            app:destination="@id/lista_Convites" />
+        <action
+            android:id="@+id/action_nav_home_to_info_Liga"
+            app:destination="@id/info_Liga">
+        <argument
+            android:name="idliga"
+            app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_nav_home_to_novo_Campeonato"
+            app:destination="@id/novo_Campeonato" />
+        <action
+            android:id="@+id/action_nav_home_to_campeonato"
+            app:destination="@id/campeonato"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/criar_Liga"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.Criar_Liga"
+        android:label="fragment_criar__liga"
+        tools:layout="@layout/fragment_criar__liga" >
+        <action
+            android:id="@+id/action_criar_Liga_to_nav_home"
+            app:destination="@id/nav_home"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/convidar_para_Liga"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.Convidar_para_Liga"
+        android:label="fragment_convite__liga"
+        tools:layout="@layout/fragment_convite__liga" >
+        <action
+            android:id="@+id/action_convidar_para_Liga_to_info_Liga"
+            app:destination="@id/info_Liga"
+            app:popUpTo="@id/info_Liga"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/lista_Convites"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.Convites.Lista_Convites"
+        android:label="Lista_Convites" >
+        <action
+            android:id="@+id/action_lista_Convites_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/info_Liga"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.Info_Liga"
+        android:label="fragment_info__liga"
+        tools:layout="@layout/fragment_info__liga" >
+        <action
+            android:id="@+id/action_info_Liga_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_info_Liga_to_convidar_para_Liga"
+            app:destination="@id/convidar_para_Liga" />
+
+        <action
+            android:id="@+id/action_info_Liga_to_alterar_Foto_Visitante"
+            app:destination="@id/alterar_Foto_Visitante">
+        <argument
+            android:name="idjog"
+            app:argType="string" />
+        <argument
+            android:name="nomejog"
+            app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_info_Liga_to_inserir_Jogador"
+            app:destination="@id/inserir_Jogador" />
+    </fragment>
+    <fragment
+        android:id="@+id/inserir_Jogador"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.Inserir_Jogador"
+        android:label="Inserir_Jogador" >
+        <action
+            android:id="@+id/action_inserir_Jogador_to_info_Liga"
+            app:destination="@id/info_Liga"
+            app:popUpTo="@id/info_Liga"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/alterar_Foto_Visitante"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.home.Alterar_Foto_Visitante"
+        android:label="Alterar_Foto_Visitante" >
+        <action
+            android:id="@+id/action_alterar_Foto_Visitante_to_info_Liga"
+            app:destination="@id/info_Liga"
+            app:popUpTo="@id/info_Liga"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="idjog"
+            app:argType="string" />
+        <argument
+            android:name="nomejog"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/novo_Campeonato"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.Campeonatos.Novo_Campeonato"
+        android:label="novo_campeonato_fragment"
+        tools:layout="@layout/novo_campeonato_fragment" >
+        <action
+            android:id="@+id/action_novo_Campeonato_to_nav_home"
+            app:destination="@id/nav_home"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_novo_Campeonato_to_inscrever_Jogadores"
+            app:destination="@id/inscrever_Jogadores"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/inscrever_Jogadores"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.Campeonatos.Inscrever_Jogadores"
+        android:label="fragment_inscrever__jogadores"
+        tools:layout="@layout/fragment_inscrever__jogadores" >
+        <action
+            android:id="@+id/action_inscrever_Jogadores_to_novo_Campeonato"
+            app:destination="@id/novo_Campeonato"
+            app:popUpTo="@id/novo_Campeonato"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_inscrever_Jogadores_to_sortear_Jogos"
+            app:destination="@id/sortear_Jogos"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sortear_Jogos"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.Campeonatos.Sortear_Jogos"
+        android:label="fragment_sortear__jogos"
+        tools:layout="@layout/fragment_sortear__jogos" >
+        <action
+            android:id="@+id/action_sortear_Jogos_to_inscrever_Jogadores"
+            app:destination="@id/inscrever_Jogadores"
+            app:popUpTo="@id/inscrever_Jogadores"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sortear_Jogos_to_campeonato"
+            app:destination="@id/campeonato"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/sortear_Jogos"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/campeonato"
+        android:name="com.ponto.ideal.solucoes.tabelacampeonato.ui.Campeonatos.Campeonato"
+        android:label="fragment_campeonato"
+        tools:layout="@layout/fragment_campeonato" >
+        <action
+            android:id="@+id/action_campeonato_to_sortear_Jogos"
+            app:destination="@id/sortear_Jogos"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/sortear_Jogos"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_campeonato_to_nav_home"
+            app:destination="@id/nav_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

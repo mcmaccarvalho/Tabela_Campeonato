@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cllistaconv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Listar_Convites">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvconvites"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvfecha"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#FF0D0D"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@color/fundo_aviso">
+
+            <ImageView
+                android:id="@+id/imgjog"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/jogador"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/escudo_preto_gde" />
+
+            <TextView
+                android:id="@+id/txtjog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/jogador"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgjog" />
+
+            <TextView
+                android:id="@+id/txtfecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/texto_fecha"
+                android:textAlignment="center"
+                android:textColor="@color/fundo_verde_escuro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtjog" />
+
+
+            <Button
+
+                android:id="@+id/btok"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="16dp"
+                android:text="@string/ok"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rippleColor="@color/fundo_verde_escuro"
+                app:strokeColor="@color/fundo_verde_escuro" />
+
+            <TextView
+                android:id="@+id/txtresposta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/resposta"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtfecha" />
+
+            <TextView
+                android:id="@+id/txtfinalizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/clique_em_ok_para_finalizar"
+                android:textColor="@color/fundo_verde_escuro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtresposta" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvresposta"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#FF0D0D"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@color/fundo_aviso">
+
+            <ImageView
+                android:id="@+id/imgliga"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/liga"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/escudo_preto_gde" />
+
+            <ImageView
+                android:id="@+id/imgshare2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/escudoliga"
+                app:layout_constraintEnd_toEndOf="@+id/imgliga"
+                app:layout_constraintTop_toTopOf="@+id/imgliga"
+                app:srcCompat="@drawable/liga_share" />
+
+            <TextView
+                android:id="@+id/txtliga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/liga"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgliga" />
+
+            <TextView
+                android:id="@+id/txtconvite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/texto_convite"
+                android:textAlignment="center"
+                android:textColor="@color/fundo_verde_escuro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtliga" />
+
+            <TextView
+                android:id="@+id/txtselecione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/selecione_op_o"
+                android:textColor="@color/fundo_verde_escuro"
+                app:layout_constraintEnd_toEndOf="@+id/txtconvite"
+                app:layout_constraintStart_toStartOf="@+id/txtconvite"
+                app:layout_constraintTop_toBottomOf="@+id/txtconvite" />
+
+            <Button
+
+                android:id="@+id/btcancelar"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+
+                android:layout_marginBottom="16dp"
+                android:text="@string/cancelar"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgconvite"
+                app:rippleColor="@color/fundo_verde_escuro"
+                app:strokeColor="@color/fundo_verde_escuro" />
+
+
+            <Button
+
+                android:id="@+id/btresponder"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+
+                android:text="@string/responder"
+                android:textColor="@color/fundo_verde_escuro"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btcancelar"
+                app:layout_constraintVertical_bias="0.0"
+                app:rippleColor="@color/fundo_verde_escuro"
+                app:strokeColor="@color/fundo_verde_escuro" />
+
+            <RadioGroup
+                android:id="@+id/rgconvite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/txtconvite"
+                app:layout_constraintStart_toStartOf="@+id/txtconvite"
+                app:layout_constraintTop_toBottomOf="@+id/txtselecione">
+
+                <RadioButton
+                    android:id="@+id/rbaceitar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/aceitar"
+                    android:textColor="@color/fundo_verde_escuro" />
+
+                <RadioButton
+                    android:id="@+id/rbrecusar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/recusar"
+                    android:textColor="@color/fundo_verde_escuro" />
+            </RadioGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
